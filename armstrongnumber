@@ -1,0 +1,27 @@
+public class aamstrong {
+	public static boolean isArmstrong(int num) {
+		int temp,rem, sum = 0;
+		temp=num;
+		while (temp!= 0)
+        {
+            rem = temp % 10;
+            sum += Math.pow(rem, 3);
+            temp =temp/10;
+        }
+		if(sum==num) {
+			return true;
+		}
+		else
+			return false;
+	}
+    public static void main(String[] args) {
+    	aamstrong s=new aamstrong();
+        System.out.println("Enter the number:");
+        Scanner sc = new Scanner(System. in );	
+        int num = sc.nextInt();
+        if(s.isArmstrong(num))
+        	System.out.println( num+" number is Armstrong " );
+        else
+        	System.out.println(num+" number is not Armstrong");
+    }
+}
